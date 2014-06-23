@@ -21,6 +21,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'fatih/vim-go'
+Plugin 'moll/vim-node'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -179,3 +180,6 @@ au FileType go nmap  <leader>b  <Plug>(go-build)
 au FileType go nmap  <leader>t  <Plug>(go-test)
 
 au FileType go nmap <Leader>d <Plug>(go-doc-browser)
+
+" Node.js settings
+autocmd User Node if &filetype == "javascript" | setlocal expandtab | endif
